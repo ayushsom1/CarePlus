@@ -93,6 +93,7 @@ export const AppointmentForm = ({
       } else {
         const appointmentToUpdate = {
           userId,
+          timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
           appointmentId: appointment?.$id!,
           appointment: {
             primaryPhysician: values.primaryPhysician,
